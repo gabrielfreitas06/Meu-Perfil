@@ -1,0 +1,59 @@
+{
+  // editor
+  "editor.wordWrap": "on",
+  "editor.fontSize": 18,
+  "editor.lineHeight": 30,
+  "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
+  // explorer
+  "explorer.compactFolders": false,
+
+  // workbench
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Omni",
+
+  // prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.enable": true,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 2,
+  "prettier.semi": false,
+
+  // terminal
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  // Acessibilidade e Validação
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
+
+  // Configurações para forçar a organização de Tags
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
+  },
+
+  // Emmet: Garante que ao criar inputs, o label venha junto
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  // Regra para ESLint (destaca inputs sem label no React/JSX)
+  "eslint.options": {
+    "rules": {
+      "jsx-a11y/label-has-associated-control": "error"
+    }
+  }
+}
