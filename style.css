@@ -1,37 +1,90 @@
 * /* Estilização de todos os documentos HTML */ {
-    margin: 0px; /* Define a margem externa de todos os elementos*/
-    padding: 0px; /* Define a margem interna de todos os elementos*/
-    box-sizing: border-box; /*Define o modelo de caixa para todos os elementos*/
+  margin: 0px; /* Define a margem externa de todos os elementos*/
+  padding: 0px; /* Define a margem interna de todos os elementos*/
+  box-sizing: border-box; /*Define o modelo de caixa para todos os elementos*/
 
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-  }
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
 
-  :root /*Define Variáveis Globais*/ {
-    --background-padrao: url("assets/imgs/minha_foto.jpg")
-  }
+:root /*Define Variáveis Globais*/ {
+  --background-padrao: url("assets/imgs/bg-desktop.jpg");
+  --colorTexto-padrao: #ffffff;
+}
 
 /* ============================================================================================================================*/
 /*                                                  Tela de Guia Perfil                                                        */
 /* ============================================================================================================================*/
 
-  .imagemFrase /*Estilização de toda Divisão Imagem e Frase*/ {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+body /*Estilização de todo corpo da Tela de Guia*/ {
+  background: var(--background-padrao) no-repeat top center/cover;
+}
+
+.imagemFrase /*Estilização de toda Divisão Imagem e Frase*/ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagemFrase img /*Estilização da Imagem na Divisão Imagem e Frase*/ {
+  margin: 36px;
+
+  width: 120px;
+  height: auto;
+
+  border-radius: 50%;
+
+  transform: translateX(20px);
+}
+
+#fraseMomento /*Estilização do parágrafo da Frase pelo momento do dia*/ {
+  color: var(--colorTexto-padrao);
+  font-size: 20px;
+}
+
+.navegacaoGuia /*Estilização de Toda Divisão Navegação da Página Guia*/ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navegacaoGuia ul li /*Estilização a Lista Ordenada e suas Listas*/ {
+  list-style: none;
+
+  padding: 25px 140px;
+  margin: 25px;
+
+  text-align: center;
+  border: 1px solid #0FFCBE;
+  border-radius: 25px;
+
+  background: rgba(0,130,89,0.5);
+
+  cursor: pointer;
+}
+
+.navegacaoGuia a /*Estilização de Todos os Links Guia*/ {
+  text-decoration: none;
+
+  color: var(--colorTexto-padrao);
+
+  font-size: 20px;
+}
+
+.navegacaoGuia ul li:hover /*Estilização de todos os links guia ao passar o mouse*/ {
+  font-weight: bold;
+
+  box-shadow: 2px 4px 2px 12px #000000;
+  background: rgba(0, 130, 89, 0.281) 
+}
+
+@media screen and (max-width: 1314px) /*Estilização de todos os dispositivos até 768px de largura*/ {
+  body /*Estilização de todo corpo da Tela de Guia*/ {
+    background: url("./assets/imgs/bg-mobile.jpg") no-repeat top center/cover;
   }
-
-  .imagemFrase img /*Estilização da Imagem na Divisão Imagem e Frase*/ {
-    background: var(--background-padrao) no-repeat top center/cover;
-
-    border-radius: 20px;
-  }
-
-
-
-
+}
 
 /* ============================================================================================================================*/
 /*                                                  Tela de Guia Perfil                                                        */
