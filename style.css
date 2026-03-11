@@ -9,6 +9,29 @@
   font-style: normal;
 }
 
+header /*Estilização de todos os cabeçalhos*/ {
+    width: auto;
+    height: 8dvh;
+
+    background: rgba(0, 131, 218, 0.726);
+
+    overflow: hidden;
+}
+
+.cabecalhoNav /*Estilização de Todas as Navegações de Cabeçalho*/ {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cabecalhoNav img /*Estilização de todas as imagens da Navegações de Cabeçalho*/ {
+  width: 61px;
+  height: auto;
+
+  margin: 10px 0 0 0;
+
+  cursor: pointer;
+}
+
 :root /*Define Variáveis Globais*/ {
   --background-padrao: url("assets/imgs/bg-desktop.jpg");
   --colorTexto-padrao: #ffffff;
@@ -18,7 +41,7 @@
 /*                                                  Tela de Guia Perfil                                                        */
 /* ============================================================================================================================*/
 
-body /*Estilização de todo corpo da Tela de Guia*/ {
+.bodyGuia /*Estilização de todo corpo da Tela de Guia*/ {
   background: var(--background-padrao) no-repeat top center/cover;
 }
 
@@ -77,15 +100,99 @@ body /*Estilização de todo corpo da Tela de Guia*/ {
   font-weight: bold;
 
   box-shadow: 2px 4px 2px 12px #000000;
-  background: rgba(0, 130, 89, 0.281) 
+  background: rgba(0, 130, 89, 0.281)
+}
+
+.meusContatos /*Estilização de todo Rodapé*/ {
+  text-align: center;
+
+  margin: 25px;
+}
+
+.meusContatos img /*Estilização de todos os <a> do Rodapé*/ {
+  width: 75px;
+  height: auto;
+
+  margin: 0 12px;
+ 
+  cursor: pointer;
+}
+
+.meusContatos img:hover /*Estilização de todos os <a> do Rodapé*/ {
+  width: 100px;
+  height: auto;
 }
 
 @media screen and (max-width: 1314px) /*Estilização de todos os dispositivos até 768px de largura*/ {
-  body /*Estilização de todo corpo da Tela de Guia*/ {
+  .bodyGuia /*Estilização de todo corpo da Tela de Guia*/ {
     background: url("./assets/imgs/bg-mobile.jpg") no-repeat top center/cover;
   }
+  .imagemFrase img /*Estilização da Imagem na Divisão Imagem e Frase*/ {
+  margin: 36px;
+
+  width: 120px;
+  height: auto;
+
+  border-radius: 50%;
+
+  transform: translateX(4px);
+}
+  #fraseMomento /*Estilização do parágrafo da Frase pelo momento do dia*/ {
+  font-size: 16px;
+}
+.navegacaoGuia ul li /*Estilização a Lista Ordenada e suas Listas*/ {
+  list-style: none;
+
+  padding: 20px 100px;
+  margin: 20px;
+
+  text-align: center;
+  border: 1px solid #0FFCBE;
+  border-radius: 25px;
+
+  transform: translateX(-4px);
+
+  background: rgba(0,130,89,0.5);
+
+  cursor: pointer;
+}
+.navegacaoGuia a /*Estilização de Todos os Links Guia*/ {
+  text-decoration: none;
+
+  color: var(--colorTexto-padrao);
+
+  font-size: 16px;
+}
+.meusContatos img /*Estilização de todos os <a> do Rodapé*/ {
+  width: 60px;
+  height: auto;
+
+  margin: 0 12px;
+ 
+  cursor: pointer;
+}
 }
 
+@media screen and (height:882px) /*Estilização de Telas de altura de 882px*/ {
+  .bodyGuia /*Estilização de todo corpo da Tela de Guia*/ {
+    background: url("./assets/imgs/bg-desktop.jpg") no-repeat top center;
+  }
+  #fraseMomento /*Estilização do parágrafo da Frase pelo momento do dia*/ {
+  font-size: 14px;
+}
+}
 /* ============================================================================================================================*/
 /*                                                  Tela de Guia Perfil                                                        */
+/* ============================================================================================================================*/
+
+/* ============================================================================================================================*/
+/*                                                  Tela de Sobre Mim                                                        */
+/* ============================================================================================================================*/
+
+  .resumoSobreMin /*Estilização de toda Seção Resumo Sobre Mim*/ {
+    background: #0FFCBE;
+  }
+
+/* ============================================================================================================================*/
+/*                                                  Tela de Sobre Mim                                                        */
 /* ============================================================================================================================*/
