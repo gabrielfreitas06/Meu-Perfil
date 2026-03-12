@@ -9,13 +9,21 @@
   font-style: normal;
 }
 
+body /*Estilização de todo corpo*/ {
+  border: 2px solid #000000;
+}
+
 header /*Estilização de todos os cabeçalhos*/ {
     width: auto;
     height: 8dvh;
 
-    background: rgba(0, 131, 218, 0.726);
+    background: var(--colorFundoNav-padrao) ;
 
-    overflow: hidden;
+    /*Posição vai ser fixa*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .cabecalhoNav /*Estilização de Todas as Navegações de Cabeçalho*/ {
@@ -35,6 +43,8 @@ header /*Estilização de todos os cabeçalhos*/ {
 :root /*Define Variáveis Globais*/ {
   --background-padrao: url("assets/imgs/bg-desktop.jpg");
   --colorTexto-padrao: #ffffff;
+  --colorFundoNav-padrao: rgb(0, 131, 218);
+  --colorFundo-padrao: rgb(245, 245, 245);
 }
 
 /* ============================================================================================================================*/
@@ -190,7 +200,58 @@ header /*Estilização de todos os cabeçalhos*/ {
 /* ============================================================================================================================*/
 
   .resumoSobreMin /*Estilização de toda Seção Resumo Sobre Mim*/ {
-    background: #0FFCBE;
+    background: var(--colorFundo-padrao);
+
+    width: auto;
+    max-width: 1980px;
+    height: 700px;
+    max-height: 1020px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    overflow: hidden;
+  }
+
+  .resumoSobreMin p /*Estilização de todos os p da Seção Resumo Sobre Mim*/ {
+    font-size: 30px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+
+
+    margin: 82px 25px 0 0;
+    
+    text-align: left;
+  }
+
+  .resumoSobreMin img /*Estilização da imagem da Seção Resumo Sobre Mim*/ {
+    width: 480px;
+    height: 460px;
+
+    margin: 25px;
+
+    border: 1px solid var(--colorFundo-padrao);
+    border-radius: 50%;
+  }
+
+  .navPagina /*Estilização Navegação entre a Página*/ {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navPagina a /*Estilização de todos os <a> da Navegação entre Página*/ {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+
+    background: #898989;
+
+    border: 4px solid #000000;
+    border-radius: 61px;
+
+    padding: 20px 50px;
+
+    cursor: pointer;
   }
 
 /* ============================================================================================================================*/
