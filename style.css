@@ -237,9 +237,11 @@ header /*Estilização de todos os cabeçalhos*/ {
   .navPagina /*Estilização Navegação entre a Página*/ {
     display: flex;
     justify-content: space-around;
+
+    overflow: hidden;
   }
 
-  .navPagina a /*Estilização de todos os <a> da Navegação entre Página*/ {
+  .animacaoLink /*Estilização dos Links de Navegação entre a Página*/ {
     text-decoration: none;
     color: #000000;
     font-size: 25px;
@@ -252,7 +254,21 @@ header /*Estilização de todos os cabeçalhos*/ {
     padding: 20px 50px;
 
     cursor: pointer;
+
+    /*Estado inicial da Animação*/
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out; /*Velocidade de Animação*/
   }
+
+  .animacaoLink.active /*Classe que o JS vai ativar ao rolar*/ {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /*Atraso (delay) para aparecerem um após o outro*/ 
+  .animacaoLink:nth-child(2) {transition-delay: 0.2s; }
+  .animacaoLink:nth-child(3) {transition-delay: 0.4s; }
 
 /* ============================================================================================================================*/
 /*                                                  Tela de Sobre Mim                                                        */

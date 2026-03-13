@@ -24,3 +24,31 @@ const validarFrase = () => {
 window.onload = validarFrase
 
 //                                                Tela de Guia Perfi
+
+//                                                  Tela Sobre Mim
+
+//Constantes
+
+
+
+    //Função que aciona o .active
+  const aparecer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entra) => { 
+      //Se o elemento estiver visível na tela
+        if (entra.isIntersecting) {
+          entra.target.classList.add('active')
+        }
+    })
+  },       {
+      threshold: 0.1 //Ativa quando 10% do elemento aparecer
+  });
+
+    //Seleciona todos os links e coloca observadores neles
+  const linkNavPagina = document.querySelectorAll(".animacaoLink")
+  linkNavPagina.forEach((el) => aparecer.observe(el))
+      //Função que aciona o .active
+
+
+
+      
+//                                                  Tela Sobre Mim
