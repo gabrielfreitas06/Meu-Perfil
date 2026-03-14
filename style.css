@@ -9,13 +9,9 @@
   font-style: normal;
 }
 
-body /*Estilização de todo corpo*/ {
-  border: 2px solid #000000;
-}
-
 header /*Estilização de todos os cabeçalhos*/ {
     width: auto;
-    height: 8dvh;
+    height: 15dvh;
 
     background: var(--colorFundoNav-padrao) ;
 
@@ -32,10 +28,14 @@ header /*Estilização de todos os cabeçalhos*/ {
 }
 
 .cabecalhoNav img /*Estilização de todas as imagens da Navegações de Cabeçalho*/ {
-  width: 61px;
+  width: 81px;
   height: auto;
 
-  margin: 10px 0 0 0;
+  margin: 30px 0 0 0;
+}
+
+.cabecalhoNav img:hover /*Estilização de todas as imagens da Navegações de Cabeçalho ao passar o cursor do mouse*/ {
+  filter: drop-shadow(25px 20px 12px #000); /*Define à sombra de forma dinâmica e inteligente*/
 
   cursor: pointer;
 }
@@ -44,7 +44,7 @@ header /*Estilização de todos os cabeçalhos*/ {
   --background-padrao: url("assets/imgs/bg-desktop.jpg");
   --colorTexto-padrao: #ffffff;
   --colorFundoNav-padrao: rgb(0, 131, 218);
-  --colorFundo-padrao: rgb(245, 245, 245);
+  --colorFundo-padrao: rgb(245, 245, 245); 
 }
 
 /* ============================================================================================================================*/
@@ -109,7 +109,7 @@ header /*Estilização de todos os cabeçalhos*/ {
 .navegacaoGuia ul li:hover /*Estilização de todos os links guia ao passar o mouse*/ {
   font-weight: bold;
 
-  box-shadow: 2px 4px 2px 12px #000000;
+  box-shadow: 2px 4px 2px 12px #000000;  /*Define à sombra de forma simples e direta*/
   background: rgba(0, 130, 89, 0.281)
 }
 
@@ -199,9 +199,26 @@ header /*Estilização de todos os cabeçalhos*/ {
 /*                                                  Tela de Sobre Mim                                                        */
 /* ============================================================================================================================*/
 
-  .resumoSobreMin /*Estilização de toda Seção Resumo Sobre Mim*/ {
+  .resumoSobreMim /*Estilização de toda Seção Resumo SObre mim*/ {
     background: var(--colorFundo-padrao);
 
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+  .resumoSobreMim h1 /*Estilização do h1 da Seção Resumo SObre mim*/ {
+    padding-top: 25px;
+
+    font-size: 80px;
+
+    text-decoration: underline;
+    word-spacing: 6px;
+    letter-spacing: 6px;
+    font-variant: small-caps; /*Código que dá ao título uma variante de todas as letras maiúsculas com tamnhado de minúsculas*/
+  }
+
+  .divResumoSobreMin /*Estilização de toda Divisão Resumo Sobre mim*/ {
     width: auto;
     max-width: 1980px;
     height: 700px;
@@ -209,11 +226,13 @@ header /*Estilização de todos os cabeçalhos*/ {
 
     display: flex;
     justify-content: space-evenly;
-
-    overflow: hidden;
   }
 
-  .resumoSobreMin p /*Estilização de todos os p da Seção Resumo Sobre Mim*/ {
+  .divResumoSobreMin h1 /*Estilização do h1 da Divisão Resumo Sobre mim*/ {
+    text-align: center;
+  }
+
+  .divResumoSobreMin p /*Estilização de todos os p da Divisão Resumo Sobre mim*/ {
     font-size: 30px;
     word-spacing: 2px;
     letter-spacing: 2px;
@@ -224,7 +243,7 @@ header /*Estilização de todos os cabeçalhos*/ {
     text-align: left;
   }
 
-  .resumoSobreMin img /*Estilização da imagem da Seção Resumo Sobre Mim*/ {
+  .divResumoSobreMin img /*Estilização da imagem da Divisão Resumo Sobre mim*/ {
     width: 480px;
     height: 460px;
 
@@ -234,9 +253,30 @@ header /*Estilização de todos os cabeçalhos*/ {
     border-radius: 50%;
   }
 
+  .divNavPagina /*Estilização da Divisão Navegação entre a Página*/ {
+    background: #000000e6;
+
+    text-align: center;
+  }
+
+  .divNavPagina h1 /*Estilização do <h1> da Divisão Navegação entre a Página*/ {
+    color: #b4b3b3 ;
+
+    padding-top: 25px;
+
+    font-size: 80px;
+
+    text-decoration: underline;
+    word-spacing: 6px;
+    letter-spacing: 6px;
+    font-variant: small-caps; /*Código que dá ao título uma variante de todas as letras maiúsculas com tamnhado de minúsculas*/
+  }
+
   .navPagina /*Estilização Navegação entre a Página*/ {
     display: flex;
     justify-content: space-around;
+
+    padding-top: 120px;
 
     overflow: hidden;
   }
@@ -258,7 +298,11 @@ header /*Estilização de todos os cabeçalhos*/ {
     /*Estado inicial da Animação*/
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.8s ease-out; /*Velocidade de Animação*/
+    transition: all 4s ease-out; /*Velocidade de Animação*/
+  }
+
+  .animacaoLink:hover /*Estilização dos Links de Navegação entre a Página ao passar o cursor do mouse*/ {
+    filter: drop-shadow(12px 10px 8px #999999);
   }
 
   .animacaoLink.active /*Classe que o JS vai ativar ao rolar*/ {
